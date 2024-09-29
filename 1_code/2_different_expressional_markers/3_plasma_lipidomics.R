@@ -1,20 +1,20 @@
 library(r4projects)
 setwd(get_project_wd())
 rm(list = ls())
-source('1-code/100-tools.R')
+source('1_code/100_tools.R')
 library(tidyverse)
 
 load(
-  "3-data_analysis/1-data-preparation/4-plasma-lipidomics-data/plasma_lipidomics_data.RData"
+  "3_data_analysis/1_data_preparation/4-plasma-lipidomics-data/plasma_lipidomics_data.RData"
 )
 
 dir.create(
-  "3-data_analysis/2_different_expressional_markers/3-plasma-lipidomics-data",
+  "3_data_analysis/2_different_expressional_markers/3-plasma-lipidomics-data",
   recursive = TRUE,
   showWarnings = FALSE
 )
 
-setwd("3-data_analysis/2_different_expressional_markers/3-plasma-lipidomics-data")
+setwd("3_data_analysis/2_different_expressional_markers/3-plasma-lipidomics-data")
 
 plasma_lipidomics_data@sample_info %>%
   dplyr::count(Trimester)
@@ -174,7 +174,9 @@ plot <-
     show_column_names = FALSE,
     cluster_columns = FALSE,
     name = "Z-score",
-    top_annotation = ha
+    top_annotation = ha,
+    border = TRUE,
+    column_split = factor(t1_data@sample_info$class, levels = c("TC", "PE"))
   )
 
 plot <- ggplotify::as.ggplot(plot)
@@ -201,7 +203,9 @@ plot <-
     cluster_columns = FALSE,
     show_column_names = FALSE,
     name = "Z-score",
-    top_annotation = ha
+    top_annotation = ha,
+    border = TRUE,
+    column_split = factor(t1_data@sample_info$class, levels = c("TC", "PE"))
   )
 
 plot <- ggplotify::as.ggplot(plot)
@@ -353,7 +357,9 @@ plot <-
     show_column_names = FALSE,
     cluster_columns = FALSE,
     name = "Z-score",
-    top_annotation = ha
+    top_annotation = ha,
+    border = TRUE,
+    column_split = factor(t2_data_early@sample_info$class, levels = c("TC", "PE"))
   )
 
 plot <- ggplotify::as.ggplot(plot)
@@ -380,7 +386,9 @@ plot <-
     cluster_columns = FALSE,
     show_column_names = FALSE,
     name = "Z-score",
-    top_annotation = ha
+    top_annotation = ha,
+    border = TRUE,
+    column_split = factor(t2_data_early@sample_info$class, levels = c("TC", "PE"))
   )
 
 plot <- ggplotify::as.ggplot(plot)
@@ -531,7 +539,9 @@ plot <-
     show_column_names = FALSE,
     cluster_columns = FALSE,
     name = "Z-score",
-    top_annotation = ha
+    top_annotation = ha,
+    border = TRUE,
+    column_split = factor(t2_data_late@sample_info$class, levels = c("TC", "PE"))
   )
 
 plot <- ggplotify::as.ggplot(plot)
@@ -558,7 +568,9 @@ plot <-
     cluster_columns = FALSE,
     show_column_names = FALSE,
     name = "Z-score",
-    top_annotation = ha
+    top_annotation = ha,
+    border = TRUE,
+    column_split = factor(t2_data_late@sample_info$class, levels = c("TC", "PE"))
   )
 
 plot <- ggplotify::as.ggplot(plot)

@@ -1,21 +1,21 @@
 library(r4projects)
 setwd(get_project_wd())
 rm(list = ls())
-source('1-code/100-tools.R')
+source('1_code/100_tools.R')
 library(tidyverse)
 
-load("3-data_analysis/1-data-preparation/1-phenotype-data/phenotype_data.RData")
+load("3_data_analysis/1_data_preparation/1-phenotype-data/phenotype_data.RData")
 
 data <-
   readr::read_csv("2-data/Lipidomics_Preeclampsia_data.csv")
 
 dir.create(
-  "3-data_analysis/1-data-preparation/4-plasma-lipidomics-data",
+  "3_data_analysis/1_data_preparation/4-plasma-lipidomics-data",
   recursive = TRUE,
   showWarnings = FALSE
 )
 
-setwd("3-data_analysis/1-data-preparation/4-plasma-lipidomics-data/")
+setwd("3_data_analysis/1_data_preparation/4-plasma-lipidomics-data/")
 
 phenotype_data$URINE_ID
 phenotype_data$Plasma_ID

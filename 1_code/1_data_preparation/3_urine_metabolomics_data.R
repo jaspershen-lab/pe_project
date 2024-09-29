@@ -1,20 +1,20 @@
 library(r4projects)
 setwd(get_project_wd())
 rm(list = ls())
-source('1-code/100-tools.R')
+source('1_code/100_tools.R')
 library(tidyverse)
 
 load("2-data/PE_urine_input_final.RData")
-load("3-data_analysis/1-data-preparation/1-phenotype-data/phenotype_data.RData")
+load("3_data_analysis/1_data_preparation/1-phenotype-data/phenotype_data.RData")
 
 
 dir.create(
-  "3-data_analysis/1-data-preparation/3-urine-metabolomics-data",
+  "3_data_analysis/1_data_preparation/3-urine-metabolomics-data",
   recursive = TRUE,
   showWarnings = FALSE
 )
 
-setwd("3-data_analysis/1-data-preparation/3-urine-metabolomics-data/")
+setwd("3_data_analysis/1_data_preparation/3-urine-metabolomics-data/")
 
 ###feature table
 expression_data <-

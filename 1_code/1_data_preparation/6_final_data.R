@@ -1,22 +1,22 @@
 library(r4projects)
 setwd(get_project_wd())
 rm(list = ls())
-source('1-code/100-tools.R')
+source('1_code/100_tools.R')
 library(tidyverse)
 
 ####plasma metabolomics data
 load(
-  "3-data_analysis/1-data-preparation/2-plasma-metabolomics-data/metabolite/plasma_metabolomics_data.RData"
+  "3_data_analysis/1_data_preparation/2_plasma_metabolomics_data/metabolite/plasma_metabolomics_data.RData"
 )
 
 ###urine metabolomics data
 load(
-  "3-data_analysis/1-data-preparation/3-urine-metabolomics-data/metabolite/urine_metabolomics_data.RData"
+  "3_data_analysis/1_data_preparation/3-urine-metabolomics-data/metabolite/urine_metabolomics_data.RData"
 )
 
 ###plasma lipidomics data
 load(
-  "3-data_analysis/1-data-preparation/4-plasma-lipidomics-data/plasma_lipidomics_data.RData"
+  "3_data_analysis/1_data_preparation/4-plasma-lipidomics-data/plasma_lipidomics_data.RData"
 )
 
 dim(plasma_metabolomics_data)

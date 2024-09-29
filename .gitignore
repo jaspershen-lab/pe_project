@@ -48,15 +48,15 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
-2-data
-2-data/
+2_data
+2_data/
 
-3-data_analysis
-3-data_analysis/
+3_data_analysis
+3_data_analysis/
 
-4-manuscript
-4-manuscript/
+4_manuscript
+4_manuscript/
 
-5-summary
-5-summary/
+5_summary
+5_summary/
 
